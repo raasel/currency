@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="cur.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1 style="color: azure;"><b>Currency Converter</b></h1>
+
+    <div class="row" style="background-color:lavender;">
+      <div class="col-sm-6">
+
+        <form class="currency" action="/action_page.php">
+          <div class="form-group"> <br>
+            <label for="sel1">Input Currency</label>
+            <select class="form-control" id="sel1" onchange="convert()">
+              <option value="1">BDT</option>
+              <option value="2">USD</option>
+              <option value="3">SAR</option>
+            </select>
+            <label for="v1">Input Value</label>
+            <input type="number" class="form-control" id="v1" oninput="convert()" placeholder="Enter Value"
+              name="number">
+          </div>
+
+          <label for="sel2">Converted Currency</label>
+          <select class="form-control" id="sel2" onchange="convert()">
+            <option value="1">BDT</option>
+            <option value="2">USD</option>
+            <option value="3">SAR</option>
+          </select>
+          <table>
+            <tr>
+              <th>
+                <h4 class="n1">Converted Value:&#160; </h4>
+              </th>
+              <th>
+                <h4 class="n1" id="result"></h4>
+              </th>
+            </tr>
+          </table>
+
+          <!-- <button type="button" class="btn btn-primary" onclick="convert()" name="button">Convert</button> -->
+          <button type="button" class="btn btn-info" onclick="document.location.reload(true)"
+            name="button">Reload</button>
+
+
+        </form>
+      </div>
+      <div class="col-sm-6" style="background-color:lavenderblush;">
+        <h1><u>Note</u></h1>
+        <div>
+          <ul class="info">
+            <li>BDT = Bangladesh</li>
+            <br>
+            <li>USD = United States of America</li><br>
+            <li>SAR = Saudi Riyal</li><br>
+            <li>1 BDT = 0.01179 USD</li><br>
+            <li>1 BDT = 0.04423 SAR</li><br>
+            <li>Reference: <a href="https://transferwise.com/gb/currency-converter/">TransferWise</a></li>
+          </ul>
+        </div>
+
+
+      </div>
+      <div class="footer">
+        <p>Copyright &#169; 2021 Md Rasel Ahmed. All Rights Reserved.</p>
+      </div>
+    </div>
+    <script src="cur.js">
+    </script>
+</body>
+
+</html>
